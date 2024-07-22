@@ -11,7 +11,7 @@ let i = 1
 
 while (i<=10) {
   factorial *= i;
-  i++
+  i++;
 }
 
-console.log(factorial)
+console.log(factorial);
