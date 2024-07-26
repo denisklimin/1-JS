@@ -5,5 +5,21 @@
  */
 
 const score = 70 // тестовое значение, можно изменять
-let grade
+let grade = Math.floor(Math.random() * 100);
 // your code
+
+console.log(grade);
+
+if(grade >= 0 && grade < 50) {
+    grade = 'F';
+} else if(grade >=50 && grade < 70) {
+    grade = 'D';
+} else if(grade >=70 && grade < 80) {
+    grade = 'C';
+} else if(grade >= 80 && grade < 90) {
+    grade = 'B';
+} else if(grade >= 90 && grade <= 100) {
+    grade = 'A';
+}
+
+console.log(grade);
