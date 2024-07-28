@@ -3,5 +3,8 @@
 function calculateAverage(a, b) {
     let c = 0;
     c = (a + b) / 2;
-    console.log(c);
+    return c;
 }
+
+const total = calculateAverage(10, 20);
+console.log(total);
