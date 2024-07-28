@@ -5,10 +5,12 @@ function isEven(a) {
     let c;
     if(a % 2 == 0) {
         c = true;
-        alert('Четное');
+        // alert('Четное');
+        console.log(c);
     } else {
         c = false;
-        alert('Нечетное');
+        // alert('Нечетное');
+        console.log(c);
     }
 
     return c;
