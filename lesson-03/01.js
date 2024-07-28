@@ -6,5 +6,9 @@ function calculateAverage(a, b) {
     return c;
 }
 
-const total = calculateAverage(10, 20);
+let first = +prompt('First number');
+let second = +prompt('Second number');
+
+const total = calculateAverage(first, second);
 console.log(total);
+alert(total);
