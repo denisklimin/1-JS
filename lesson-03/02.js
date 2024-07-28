@@ -5,16 +5,11 @@ function isEven(a) {
     let c;
     if(a % 2 == 0) {
         c = true;
-        // alert('Четное');
         console.log(c);
     } else {
         c = false;
-        // alert('Нечетное');
         console.log(c);
     }
-
     return c;
 }
-
-// const num = +prompt('Type number');
 isEven(16);
