@@ -16,5 +16,5 @@ function isEven(a) {
     return c;
 }
 
-const num = +prompt('Type number');
-isEven(num);
+// const num = +prompt('Type number');
+isEven(16);
