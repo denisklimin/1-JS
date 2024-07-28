@@ -10,4 +10,3 @@ const num3 = +prompt('Trird');
 
 const max = findLargest(num1, num2, num3);
 console.log(max);
-alert(max);
