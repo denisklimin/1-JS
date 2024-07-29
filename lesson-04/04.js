@@ -12,18 +12,17 @@
 Пример работы функции: `doubleEachCharacter('hello')` вернёт `'hheelllloo'`
 */
 
-const str = 'hello'
-const arr = str.split('')
+const str = 'hello';
+const arr = str.split('');
 
 function doubleEachCharacter(array) {
-    let newArr = []
+    let newArr = [];
     let strNew;
     for(let i = 0; i < array.length; i++) {
-        newArr.push(array[i] + array[i]);
-
+        newArr.push(array[i] + array[i])
     }
-    strNew = newArr.join('')
-    return strNew
+    strNew = newArr.join('');
+    return strNew;
 }
 
-console.log(doubleEachCharacter(arr))
+console.log(doubleEachCharacter(arr));
