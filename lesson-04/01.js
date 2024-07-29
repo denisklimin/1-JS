@@ -24,7 +24,8 @@ function includesElement(array) {
             break;
         } else bool = false
     }
-    console.log(bool)
+
+    return bool
 }
 
-includesElement(array)
+console.log(includesElement(array))
