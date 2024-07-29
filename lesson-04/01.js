@@ -14,7 +14,7 @@ includesElement([1, 2, 3], 2)  // должен вернуть `true`.
 */
 
 const array = [1, 2, 3];
-const element = 3;
+const element = 4;
 
 function includesElement(array) {
     let bool;
@@ -22,10 +22,9 @@ function includesElement(array) {
         if (array[i] === element) {
             bool = true;
             break;
-        } else bool = false
+        } else bool = false;
     }
-
-    return bool
+    return bool;
 }
 
-console.log(includesElement(array))
+includesElement(array)
