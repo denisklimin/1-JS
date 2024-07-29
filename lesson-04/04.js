@@ -13,10 +13,17 @@
 */
 
 const str = 'hello'
-let arr = str.split('')
+const arr = str.split('')
 
-console.log(arr)
+function doubleEachCharacter(array) {
+    let newArr = []
+    let strNew;
+    for(let i = 0; i < array.length; i++) {
+        newArr.push(array[i] + array[i]);
 
-function doubleEachCharacter() {
-
+    }
+    strNew = newArr.join('')
+    return strNew
 }
+
+console.log(doubleEachCharacter(arr))
