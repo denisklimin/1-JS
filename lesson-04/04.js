@@ -13,6 +13,9 @@
 */
 
 const str = 'hello'
+let arr = str.split('')
+
+console.log(arr)
 
 function doubleEachCharacter() {
 
