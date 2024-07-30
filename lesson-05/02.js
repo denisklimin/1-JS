@@ -40,8 +40,9 @@ function updateGallery(word, nword) {
     if (key === word) {
       gallery[key] = nword;
       return;
-    } gallery[word] = nword;
+    } 
   }
+  gallery[word] = nword;
   console.log(gallery);
 }
 
