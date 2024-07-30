@@ -10,39 +10,39 @@
 3. Если ресурс существует, метод должен добавлять значение `amount` к текущему количеству этого ресурса в объекте.
 */
 
-const game = {
-  resources: {
-    gold: 250,
-    lumber: 100,
-  },
-  addResource(swan, num) {
-    for (const key in game.resources) {
-      if(swan === key && num >= 0) {
-          this.resources[key] += num;
-            console.log(game.resources);
-            return;
-        } console.log('Invalid resource');
-      } 
-    } 
-  }
-
-game.addResource('gold', 500);
-
 // const game = {
 //   resources: {
 //     gold: 250,
 //     lumber: 100,
 //   },
-//   addResource(resource, num) {
-//     for (const key in this.resources) {
-//       if (resource === key && num >= 0) {
-//         this.resources[key] += num;
-//         console.log(this.resources);
-//         return; // чтобы завершить выполнение функции после добавления ресурса
-//       }
-//     }
-//     console.log('Invalid resource');
+//   addResource(swan, num) {
+//     for (const key in game.resources) {
+//       if(swan === key && num >= 0) {
+//           this.resources[key] += num;
+//             console.log(game.resources);
+//             return;
+//         } console.log('Invalid resource');
+//       } 
+//     } 
 //   }
-// };
 
-// game.addResource('lumber', 100);
+// game.addResource('gold', 500);
+
+const game = {
+  resources: {
+    gold: 250,
+    lumber: 100,
+  },
+  addResource(resource, num) {
+    for (const key in this.resources) {
+      if (resource === key && num >= 0) {
+        this.resources[key] += num;
+        console.log(this.resources);
+        return; // чтобы завершить выполнение функции после добавления ресурса
+      }
+    }
+    console.log('Invalid resource');
+  }
+};
+
+game.addResource('lumber', 100);
