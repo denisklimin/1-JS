@@ -36,22 +36,16 @@ const gallery = {
 }
 
 function updateGallery(word, nword) {
-  for(const key in gallery) {
+  for (const key in gallery) {
     if (key === word) {
       gallery[key] = nword;
-      return;
-    } 
+      return; // Завершаем функцию, если ключ найден и обновлен
+    }
   }
+  // Добавляем новый элемент, если ключ не найден
   gallery[word] = nword;
-  console.log(gallery);
+  console.log(gallery); // Выводим обновленную галерею
 }
 
-updateGallery('Mona Lisa', 'Leonardo da Vinci, 1503-1506')
-updateGallery('The Persistence of Memory', 'Salvador Dali')
-
-function screenGallery(gallery) {
-  for (const key in gallery) {
-    console.log(key, gallery[key])
-  }
-}
-screenGallery(gallery)
+updateGallery('Mona Lisa', 'Leonardo da Vinci, 1503-1506');
+updateGallery('The Persistence of Memory', 'Salvador Dali');
