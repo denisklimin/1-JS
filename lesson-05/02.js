@@ -34,6 +34,7 @@ const gallery = {
   'Starry Night': 'Vincent van Gogh',
   'The Scream': 'Edvard Munch',
 }
+screenGallery(gallery);
 
 function updateGallery(gallery, word, nword) {
   for(const key in gallery) {
@@ -43,8 +44,18 @@ function updateGallery(gallery, word, nword) {
     } 
   }
   gallery[word] = nword;
-  console.log(gallery);
+  return;
+  // console.log(gallery);
 }
 
 updateGallery(gallery, 'Mona Lisa', 'Leonardo da Vinci, 1503-1506')
 updateGallery(gallery, 'The Persistence of Memory', 'Salvador Dali')
+
+function screenGallery(gallery) {
+  for (const key in gallery) {
+    console.log(`${key} : ${gallery[key]}`);
+  }
+}
+
+console.log('_____________');
+screenGallery(gallery);
