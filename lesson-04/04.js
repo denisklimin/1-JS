@@ -12,7 +12,7 @@
 Пример работы функции: `doubleEachCharacter('hello')` вернёт `'hheelllloo'`
 */
 
-const str = 'hello';
+const str = '!@#';
 const arr = str.split('');
 
 function doubleEachCharacter(array) {
