@@ -35,17 +35,16 @@ const gallery = {
   'The Scream': 'Edvard Munch',
 }
 
-function updateGallery(word, nword) {
-  for (const key in gallery) {
+function updateGallery(gallery, word, nword) {
+  for(const key in gallery) {
     if (key === word) {
       gallery[key] = nword;
-      return; // Завершаем функцию, если ключ найден и обновлен
-    }
+      return;
+    } 
   }
-  // Добавляем новый элемент, если ключ не найден
   gallery[word] = nword;
-  console.log(gallery); // Выводим обновленную галерею
+  console.log(gallery);
 }
 
-updateGallery('Mona Lisa', 'Leonardo da Vinci, 1503-1506');
-updateGallery('The Persistence of Memory', 'Salvador Dali');
+updateGallery(gallery, 'Mona Lisa', 'Leonardo da Vinci, 1503-1506')
+updateGallery(gallery, 'The Persistence of Memory', 'Salvador Dali')
