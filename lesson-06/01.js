@@ -26,11 +26,14 @@ const nextButton = document.querySelector('#next')
 const slides = document.querySelectorAll('.item')
 console.log(slides)
 
-WEB_TECH_IMAGES.forEach((image, index) => {
-    if (slides[index]) {
-        slides[index].src = image
-    }
-});
+// WEB_TECH_IMAGES.forEach((image, index) => {
+//     if (slides[index]) {
+//         slides[index].src = image
+//     }
+// });
+
+for(let i = 0; i < WEB_TECH_IMAGES.length; i++)
+    slides[i].src = WEB_TECH_IMAGES[i]
 
 function showPreviousSlide() {
     slideIndex = (slideIndex - 1 + WEB_TECH_IMAGES.length) % WEB_TECH_IMAGES.length
@@ -43,8 +46,8 @@ function showNextSlide() {
 }
 
 function updateSlider() {
-    slides.forEach((slide, index) => {
-        if (index === slideIndex) {
+    slides.forEach((slide, i) => {
+        if (i === slideIndex) {
         slide.style.display = 'block'
         } else {
         slide.style.display = 'none'
