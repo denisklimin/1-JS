@@ -23,17 +23,17 @@ let slideIndex = 0
 // const slider = document.querySelector('.list')
 const prevButton = document.querySelector('#prev')
 const nextButton = document.querySelector('#next')
-const slides = document.querySelectorAll('.item')
+const slides = document.querySelectorAll('#web-tech-image')
 console.log(slides)
 
-// WEB_TECH_IMAGES.forEach((image, index) => {
-//     if (slides[index]) {
-//         slides[index].src = image
-//     }
-// });
+WEB_TECH_IMAGES.forEach((image, index) => {
+    if (slides[index]) {
+        slides[index].src = image
+    }
+});
 
-for(let i = 0; i < WEB_TECH_IMAGES.length; i++)
-    slides[i].src = WEB_TECH_IMAGES[i]
+// for(let i = 0; i < WEB_TECH_IMAGES.length; i++)
+//     slides[i].src = WEB_TECH_IMAGES[i]
 
 function showPreviousSlide() {
     slideIndex = (slideIndex - 1 + WEB_TECH_IMAGES.length) % WEB_TECH_IMAGES.length
