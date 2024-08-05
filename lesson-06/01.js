@@ -21,8 +21,8 @@ const WEB_TECH_IMAGES = [
 let slideIndex = 0
 
 // const slider = document.querySelector('.list')
-const prevButton = document.querySelector('#prev')
-const nextButton = document.querySelector('#next')
+const prevButton = document.querySelector('#prev-button')
+const nextButton = document.querySelector('#next-button')
 const slides = document.querySelectorAll('#web-tech-image')
 console.log(slides)
 
