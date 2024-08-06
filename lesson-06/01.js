@@ -26,11 +26,11 @@ const nextButton = document.querySelector('#next-button')
 const slides = document.querySelectorAll('#web-tech-image')
 console.log(slides)
 
-// WEB_TECH_IMAGES.forEach((image, index) => {
-//     if (slides[index]) {
-//         slides[index].src = image
-//     }
-// });
+WEB_TECH_IMAGES.forEach((image, index) => {
+    if (slides[index]) {
+        slides[index].src = image
+    }
+});
 
 // for(let i = 0; i < WEB_TECH_IMAGES.length; i++)
 //     slides[i].src = WEB_TECH_IMAGES[i]
