@@ -10,7 +10,7 @@
 */
 console.log(`###THIRD###`)
 
-const truncate = (str, maxLength) => {
+function truncate(str, maxLength) {
   // your code
   return str.length > maxLength ? str.slice(0, maxLength) + '...' : str
 }
