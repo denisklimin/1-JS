@@ -9,6 +9,14 @@
 * truncate("Короткая строка", 20) // Ожидаемый результат: "Короткая строка"
 */
 
-function truncate(str, maxLength) {
+const truncate = (str, maxLength) => {
   // your code
+  let copyStr = str.split('')
+  if(copyStr.length > maxLength) {
+    copyStr.length = maxLength
+    return console.log(`${copyStr.join('')}...`)
+  } else return console.log(`${str}`)
 }
+
+truncate("Вот, что мне действительно нравится в этом", 20)
+truncate("Короткая строка", 20)
