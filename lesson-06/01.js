@@ -18,44 +18,21 @@ const WEB_TECH_IMAGES = [
     'https://production-it-incubator.s3.eu-central-1.amazonaws.com/file-manager/Image/784380b9-6937-42a6-bdfe-869835820234_html-magic-logo.jpg',
 ]
 
-let slideIndex = 0
-
-// const slider = document.querySelector('.list')
 const prevButton = document.querySelector('#prev-button')
 const nextButton = document.querySelector('#next-button')
-const slides = document.querySelectorAll('#web-tech-image')
-console.log(slides)
+const slides = document.querySelector('#web-tech-image')
+const Index = document.querySelector('#index')
 
-WEB_TECH_IMAGES.forEach((image, index) => {
-    if (slides[index]) {
-        slides[index].src = image
-    }
-});
+let currentIndex = 0
 
-// for(let i = 0; i < WEB_TECH_IMAGES.length; i++)
-//     slides[i].src = WEB_TECH_IMAGES[i]
+prevButton.addEventListener('click', function() {
+    currentIndex = (currentIndex - 1 + WEB_TECH_IMAGES.length) % WEB_TECH_IMAGES.length
+    slides.src = WEB_TECH_IMAGES[currentIndex]
+    console.log(currentIndex)
+})
 
-function showPreviousSlide() {
-    slideIndex = (slideIndex - 1 + WEB_TECH_IMAGES.length) % WEB_TECH_IMAGES.length
-    updateSlider();
-}
-
-function showNextSlide() {
-    slideIndex = (slideIndex + 1) % WEB_TECH_IMAGES.length
-    updateSlider();
-}
-
-function updateSlider() {
-    slides.forEach((slide, i) => {
-        if (i === slideIndex) {
-        slide.style.display = 'block'
-        } else {
-        slide.style.display = 'none'
-        }
-    });
-}
-
-prevButton.addEventListener('click', showPreviousSlide)
-nextButton.addEventListener('click', showNextSlide)
-
-updateSlider()
+nextButton.addEventListener('click', function() {
+    currentIndex = (currentIndex + 1) % WEB_TECH_IMAGES.length
+    slides.src = WEB_TECH_IMAGES[currentIndex]
+    console.log(currentIndex)
+})
