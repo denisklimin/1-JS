@@ -5,9 +5,7 @@
 
 const isNumeric = (str) => {
   // your code
-  if(Number(str)) {
-    return true
-  } else return false
+  return !isNaN(str) && str.trim() !== ''
 }
 
 console.log(isNumeric('123')) // Ожидаемый результат: true
