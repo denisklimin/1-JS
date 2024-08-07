@@ -25,14 +25,28 @@ const Index = document.querySelector('#index')
 
 let currentIndex = 0
 
+// prevButton.addEventListener('click', function() {
+//     currentIndex = (currentIndex - 1 + WEB_TECH_IMAGES.length) % WEB_TECH_IMAGES.length
+//     slides.src = WEB_TECH_IMAGES[currentIndex]
+//     console.log(currentIndex)
+// })
+
+// nextButton.addEventListener('click', function() {
+//     currentIndex = (currentIndex + 1) % WEB_TECH_IMAGES.length
+//     slides.src = WEB_TECH_IMAGES[currentIndex]
+//     console.log(currentIndex)
+// })
+
+function updateSlide(index) {
+    currentIndex = (index + WEB_TECH_IMAGES.length) % WEB_TECH_IMAGES.length;
+    slides.src = WEB_TECH_IMAGES[currentIndex];
+    console.log(currentIndex);
+}
+
 prevButton.addEventListener('click', function() {
-    currentIndex = (currentIndex - 1 + WEB_TECH_IMAGES.length) % WEB_TECH_IMAGES.length
-    slides.src = WEB_TECH_IMAGES[currentIndex]
-    console.log(currentIndex)
-})
+    updateSlide(currentIndex - 1);
+});
 
 nextButton.addEventListener('click', function() {
-    currentIndex = (currentIndex + 1) % WEB_TECH_IMAGES.length
-    slides.src = WEB_TECH_IMAGES[currentIndex]
-    console.log(currentIndex)
-})
+    updateSlide(currentIndex + 1);
+});
