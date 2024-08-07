@@ -12,13 +12,8 @@ console.log(`###THIRD###`)
 
 const truncate = (str, maxLength) => {
   // your code
-  const res = str.length > maxLength ? str.slice(0, maxLength) + '...' : str
-  console.log(res)
-  return res
+  return str.length > maxLength ? str.slice(0, maxLength) + '...' : str
 }
 
 truncate("Вот, что мне действительно нравится в этом", 20)
 truncate("Короткая строка", 20)
-
-
-// return console.log(str.length > maxLength ? str.slice(0, maxLength) + '...' : str)
