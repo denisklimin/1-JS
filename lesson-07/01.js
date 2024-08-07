@@ -8,7 +8,7 @@
 console.log(`###FIRST###`)
 
 const capitalizeWords = (str) => {
-  return console.log(str.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' '))
+  return str.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
 }
 
 capitalizeWords('hello world from javascript')
