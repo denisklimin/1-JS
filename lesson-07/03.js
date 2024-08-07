@@ -11,11 +11,7 @@
 
 const truncate = (str, maxLength) => {
   // your code
-  let copyStr = str.split('')
-  if(copyStr.length > maxLength) {
-    copyStr.length = maxLength
-    return console.log(`${copyStr.join('')}...`)
-  } else return console.log(`${str}`)
+  return console.log(str.length > maxLength ? str.slice(0, maxLength) + '...' : str)
 }
 
 truncate("Вот, что мне действительно нравится в этом", 20)
