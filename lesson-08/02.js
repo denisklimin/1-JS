@@ -36,7 +36,6 @@ startButton.addEventListener('click', () => {
   console.log('Start button clicked. Timer started:', isTimerStarted)
   let counter = 3
   // your code
-  const countdownDisplay = document.getElementById('countdown')
   if(isTimerStarted) {
     console.log('Timer already started. Exiting...')
     return
