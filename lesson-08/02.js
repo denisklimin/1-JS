@@ -40,14 +40,17 @@ startButton.addEventListener('click', () => {
     console.log('Timer already started. Exiting...')
     return
   } 
+
+  countdownDisplay.textContent = counter
   isTimerStarted = true
     timerId = setInterval(() => {
+
       console.log('Timer running. Counter:', counter)
-      countdownDisplay.textContent = counter
       counter--
-      if (counter < 0){
-        clearInterval(timerId)
+      countdownDisplay.textContent = counter
+      if (counter === 0){
         countdownDisplay.textContent = `🚀`
+        clearInterval(timerId)
         isTimerStarted = false
         console.log('Timer ended.')
       }
@@ -57,6 +60,7 @@ startButton.addEventListener('click', () => {
 cancelButton.addEventListener('click', () => {
   // your code
   if(!isTimerStarted) return
+  
   isTimerStarted = false
   clearInterval(timerId)
   countdownDisplay.textContent = `Отменено`
