@@ -41,3 +41,15 @@ startButton.addEventListener('click', () => {
 cancelButton.addEventListener('click', () => {
   // your code
 })
+
+
+// Оптимизация
+petShop.addEventListener('click', function(event) {
+  const petId = event.target.id
+    if (cart.length >= 3) {
+      messageBox.textContent = `Вы не можете добавить более 3 питомцев`;
+    } else {
+      cart.push(petId);
+      updateCartDisplay();
+  }
+})
