@@ -40,20 +40,22 @@ startButton.addEventListener('click', () => {
     timerId = setInterval(() => {
       if (isTimerStarted) {
         countdownDisplay.textContent = counter
-        if(counter === 0) 
-          return countdownDisplay.textContent = `🚀`
+        if(counter === 0) {
+          countdownDisplay.textContent = `🚀`
+          isTimerStarted = false
+          return
+        }
         counter -= 1
       }
     }, 1000)
-    return
   })
 
 cancelButton.addEventListener('click', () => {
   // your code
+  if(!isTimerStarted) return
   isTimerStarted = false
   if(!isTimerStarted) {
     clearInterval(timerId)
     return countdownDisplay.textContent = `Отменено`
   }
-  return
 });
