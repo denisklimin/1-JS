@@ -33,17 +33,24 @@ let isTimerStarted = false
 let timerId
 
 startButton.addEventListener('click', () => {
+  console.log('Start button clicked. Timer started:', isTimerStarted)
   let counter = 3
   // your code
-  if(isTimerStarted) return
+  const countdownDisplay = document.getElementById('countdown')
+  if(isTimerStarted) {
+    console.log('Timer already started. Exiting...')
+    return
+  } 
   isTimerStarted = true
     timerId = setInterval(() => {
+      console.log('Timer running. Counter:', counter)
       countdownDisplay.textContent = counter
       counter--
       if (counter < 0){
         clearInterval(timerId)
         countdownDisplay.textContent = `🚀`
         isTimerStarted = false
+        console.log('Timer ended.')
       }
     }, 1000)
   })
