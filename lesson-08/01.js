@@ -74,10 +74,9 @@ petShop.addEventListener('click', function(event) {
     return messageBox.textContent = `Вы не можете добавить более 3 питомцев`
   }
   item.forEach(el => {
-      if(el.id === event.target.id ) {
+      if(el.id === event.target.id && !cart.includes(el.id)) {
         cart.push(el.id)
         updateCartDisplay(cart)
       } 
     }) 
   })
-  
