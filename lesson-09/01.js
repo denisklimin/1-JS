@@ -37,12 +37,9 @@ const filter = (array, callback) => {
 }
 
 const checkArr = (element) => {
-  if(element % 2 != 0) {
-    return element
-  }
+  return element % 2 != 0
 }
 
 const numbers = [1, 2, 3, 4, 5]
 
 console.log(filter(numbers, checkArr))
-console.log(numbers)
