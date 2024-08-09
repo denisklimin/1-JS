@@ -24,21 +24,21 @@ console.log(oddNumbers) // Должен вывести: [1, 3, 5]
 */
 
 const filter = (array, callback) => {
-  const newArr = []
+  const newArr = [];
   for(let index = 0; index < array.length; index++) {
-    const element = array[index]
+    const element = array[index];
 
     if(callback(element, index)) {
-      newArr.push(element)
+      newArr.push(element);
     }
   }
-  return newArr
+  return newArr;
 }
 
 const checkArr = (element) => {
-  return element % 2 != 0
+  return element % 2 != 0;
 }
 
-const numbers = [1, 2, 3, 4, 5]
+// const numbers = [1, 2, 3, 4, 5];
 
-console.log(filter(numbers, checkArr))
+// console.log(filter(numbers, checkArr));
