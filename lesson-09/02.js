@@ -29,10 +29,12 @@ const numbers = [1, 2, 3, 4, 5]
 const map = (array, callback) => {
   const newArr = []
   for(let index = 0; index < array.length; index++) {
-    const element = array[index] * 2
+    const element = array[index]
 
-    callback(element, index)
-    newArr.push(element)
+    newArr.push(callback(element, index))
+    // if(callback(element, index)){
+    
+    // }
   }
   return newArr
 }
