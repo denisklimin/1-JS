@@ -35,10 +35,10 @@ const filter = (array, callback) => {
   return newArr;
 }
 
-const checkArr = (element) => {
-  return element % 2 != 0;
-}
+const numbers = [1, 2, 3, 4, 5];
+const oddNumbers = filter(numbers, (element, index) => element % 2 !== 0);
+console.log(oddNumbers); 
 
-// const numbers = [1, 2, 3, 4, 5];
-
-// console.log(filter(numbers, checkArr));
+const words = ['cat', 'sheep', 'dog', 'wolf', 'dragon'];
+const longWords = filter(words, (element, index) => element.length > 3);
+console.log(longWords);
