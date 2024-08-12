@@ -1,0 +1,16 @@
+body {
+  background-color: #fafafa;
+}
+
+section {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  gap: 20px;
+}
